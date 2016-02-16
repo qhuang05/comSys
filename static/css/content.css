@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background-image:url(../images/bg-bak.png);
+    background-repeat:repeat-x;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:14px;
+    line-height: 1.5em;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background:black;
+    position: fixed;
+    top:0;
+    color:#fff;
+    text-align: right;
+    font-size: 16px;
+    line-height: 50px;
+}
+    .header div,.header ul {
+        padding-right: 30px;
+    }
+    .header ul {
+        float: right;
+        clear: both;
+    }
+    .header li a {
+        display: block;
+        line-height: 2em;
+        font-size: 12px;
+        color:#666;
+    }
+
+.main {
+    width: 900px;
+    border:2px solid #999;
+    margin:0 auto;
+    background: #ccc;
+    padding: 50px;
+}
+.comment-box {
+    width: 1000px;
+    margin:0 auto;
+    padding: 15px;
+}
+.comment-body {
+    width:900px;
+    margin: 15px auto;
+    background-color: #ccc;
+    padding: 0 50px;
+}
+

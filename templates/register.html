@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Register</title>
+    <!--以下内容是头部中常用的一些内容,经常用于SEO,多用于搜索引擎的优化-->
+    <meta name="author" content="qiuhuang,qhuang05@sina.com" />
+    <meta name="description" content="Register" />
+    <meta name="keywords" content="Register" />
+    <!--插入icon图标-->
+	<link href="../static/images/icon/ooopic_1419747314.ico" rel="shortcut icon" type="image/x-icon"  />
+    <!--链接css样式表-->
+	<link href="../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/register.css" rel="stylesheet" type="text/css" />
+     <!--链接javascript脚本-->   
+    <script src="../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../static/js/register.js"></script>
+</head>
+
+<body>
+     <form action="/register" method='POST' class='register_box' id="regForm" onsubmit="return regCheck()">
+        <div class='usernameBox'>           
+            <label for='username'>用户名：</label>
+            <input type='text' name='username' id='username' />
+            <span>{{ errMsg }}</span>
+        </div>
+        <div class='passwordBox'>
+            <label for='password'>密码：</label>
+            <input type='password' name='password' id='password' />
+            <span></span>
+        </div>
+        <div class='emailBox'>
+            <label for='email'>常用邮箱：</label>
+            <input type="email" name="email" id="email" />
+            <span></span>
+        </div>
+        <div class='phoneBox'>
+            <label for='phonenum'>联系方式：</label>
+            <input type="text" name="phonenum" id="phonenum" />
+            <span></span>
+        </div>
+        <input type='submit' value='注册' />
+    </form>
+
+</body>
+</html>

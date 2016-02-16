@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>修改密码</title>
+    <!--以下内容是头部中常用的一些内容,经常用于SEO,多用于搜索引擎的优化-->
+    <meta name="author" content="qiuhuang,qhuang05@sina.com" />
+    <meta name="description" content="Register" />
+    <meta name="keywords" content="Register" />
+    <!--插入icon图标-->
+	<link href="../static/images/icon/ooopic_1419747314.ico" rel="shortcut icon" type="image/x-icon"  />
+    <!--链接css样式表-->
+	<link href="../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/register.css" rel="stylesheet" type="text/css" />
+     <!--链接javascript脚本-->   
+    <script src="../static/js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+     <form action="/renewPassword" method='POST' class='register_box'>
+        <div>
+            <label for='old_pwd'>原始密码：</label>
+            <input type='text' name='old_pwd' id='old_pwd' />
+            <span>{{ errMsg }}</span>
+        </div>
+        <div>
+            <label for='new_pwd'>请输入密码：</label>
+            <input type='password' name='new_pwd' id='new_pwd' />
+        </div>
+     <!--
+        <div>
+            <label for='new_pwd_2'>请再次输入密码：</label>
+            <input type="password" name='new_pwd_2' id='new_pwd_2' />
+        </div>
+     -->
+        <input type='submit' value='修改' name="renew_pwd_btn" id="renew_pwd_btn" />
+    </form>
+</body>
+</html>

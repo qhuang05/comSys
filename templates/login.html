@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Login</title>
+    <!--以下内容是头部中常用的一些内容,经常用于SEO,多用于搜索引擎的优化-->
+    <meta name="author" content="qiuhuang,qhuang05@sina.com" />
+    <meta name="description" content="Login" />
+    <meta name="keywords" content="Login" />
+    <!--插入icon图标-->
+	<link href="../static/images/icon/ooopic_1419747314.ico" rel="shortcut icon" type="image/x-icon"  />
+    <!--链接css样式表-->
+	<link href="../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/login.css" rel="stylesheet" type="text/css" />
+     <!--链接javascript脚本-->   
+    <script src="../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../static/js/login.js"></script>
+</head>
+
+<body>
+     <form action='/login' method='POST' class='login_box'>
+        <div class='usernameBox' >
+            <label for='username'>请输入用户名</label>
+            <input type='text' name='username' id='username' />
+        </div>
+
+        <div class='passwordBox'>
+            <label for='password'>请输入密码</label>
+            <input type='password' name='password' id='password' />
+        </div>
+        <div class="errorTips">
+            <span>{{ erroMsg }}</span>
+            <a href="javascript:;">忘记密码?</a>
+        </div>
+        <input type='submit' value='登录' class='loginBtn' />
+        <a href='/regPage'><input type='button' value='注册' class='regBtn' /></a>
+    </form>
+</body>
+</html>

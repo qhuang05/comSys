@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页</title>
+    <!--以下内容是头部中常用的一些内容,经常用于SEO,多用于搜索引擎的优化-->
+    <meta name="author" content="qiuhuang,qhuang05@sina.com"/>
+    <meta name="description" content="Login"/>
+    <meta name="keywords" content="Login"/>
+    <!--插入icon图标-->
+    <link href="../static/images/icon/ooopic_1419747314.ico" rel="shortcut icon" type="image/x-icon"/>
+    <!--链接css样式表-->
+    <link href="../static/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/content.css" rel="stylesheet" type="text/css"/>
+    <!--链接javascript脚本-->
+    <script src="../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../static/js/content.js"></script>
+</head>
+
+<body>
+    <div class='header'>
+        <div>账号:{{name}}</div>
+        <ul>
+            <li><a href="/renew_pwd_page">修改密码</a></li>
+            <li><a href="/myComment">查看我的评论</a></li>
+        </ul>
+    </div>
+
+    <!-- 内容 -->
+    <div class='main'>
+        <div class='title'>
+            标题：来自xxxx
+        </div>
+        <hr/>
+        <div class='content'>
+            <p>内容或图片</p>
+            <img src="../static/images/42fbfa02665fc4999cc14ae04cae753f.jpg" alt="宠物" width="200px" height="150px"/>
+            <p>xxxx</p>
+            <p>xxxxxxxx</p>
+        </div>
+    </div>
+
+    <!-- 提交评论内容文本框 -->
+    <form class="comment-box">
+        <textarea rows="8" cols="140" name='txt' id='txt'></textarea><br />
+        <input type='button' value="添加评论" id="addCommentBtn" />
+        <input type="reset" value="重置" />
+    </form>
+
+    <!-- 评论模板 -->
+    <ul id="comment_items">
+        {% for comment in comments %}
+            <li class="comment-body">
+                <p>{{ comment.body }}</p><hr/>
+                <span>评论者: {{ comment.author }}</span>
+                <span>时间: {{ comment.time }}</span><br />
+                <button type="button" onclick="deleteme({{ comment.id }},this)">删除评论</button>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
+

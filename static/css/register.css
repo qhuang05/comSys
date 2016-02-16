@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background:url(../images/bg-bak.png) repeat-x;
+	font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.register_box {
+	padding: 40px;
+}
+	.register_box div {
+		padding-bottom: 10px;
+	}
+	.register_box label {
+		display: block;
+	}
+	.register_box span {
+		color: red;
+		font-size: 12px;
+		line-height: 2em;
+	}
